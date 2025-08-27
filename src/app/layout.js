@@ -15,13 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lexendDeca.className} min-h-screen flex flex-col`}>
+      <body
+        className={`${lexendDeca.className} min-h-screen flex flex-col bg-[#f7f4ee]`}
+      >
         <header>
           <Navigation />
         </header>
-        <main className="flex flex-col">
-          {children}
-        </main>
+        <main className="flex flex-col">{children}</main>
       </body>
     </html>
   );

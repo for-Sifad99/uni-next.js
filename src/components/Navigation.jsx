@@ -18,7 +18,7 @@ const Navigation = () => {
 
   return (
     <nav>
-      <div className="flex justify-between items-center px-4 xs:px-8 md:px-10 lg:px-14 xl:px-18">
+      <div className="flex justify-between items-center px-4 sm:px-8 lg:px-12 xl:px-18">
         <div className="w-full flex justify-between items-center h-22">
           {/* Logo */}
           <Link href="/" className="-ml-2 flex items-center">
@@ -46,8 +46,8 @@ const Navigation = () => {
                 >
                   <span
                     className={`${
-                      isActive ? 'text-[#ff5c2a]' : 'text-foreground'
-                    } transition-colors`}
+                      isActive ? 'text-[#ff5c2a]' : 'text-[#4e5157]'
+                    } transition-colors  group-hover:text-[#ff5c2a]`}
                   >
                     {link.label}
                   </span>
@@ -97,7 +97,7 @@ const Navigation = () => {
 
       {/* Sidebar (mobile) */}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-80 md:hidden bg-gray-900 text-white z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-full max-w-80 md:hidden bg-[#050517] text-white z-50 transform transition-transform duration-500 ease-in-out ${
           sidebarOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -150,12 +150,12 @@ const Navigation = () => {
       </div>
 
       {/* Overlay */}
-        <div
-          className={`fixed z-40 transition-opacity duration-500 ${
-            sidebarOpen ? 'inset-0 bg-opacity-40' : ''
-          }`}
-          onClick={() => setSidebarOpen(false)}
-        />
+      <div
+        className={`fixed z-40 transition-opacity duration-500 ${
+          sidebarOpen ? 'inset-0 bg-opacity-40' : ''
+        }`}
+        onClick={() => setSidebarOpen(false)}
+      />
     </nav>
   );
 };
