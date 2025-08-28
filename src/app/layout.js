@@ -1,6 +1,7 @@
 import { Lexend_Deca } from 'next/font/google';
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import Footer from '@/components/Footer';
 
 const lexendDeca = Lexend_Deca({
   subsets: ['latin'],
@@ -22,6 +23,9 @@ export default function RootLayout({ children }) {
           <Navigation />
         </header>
         <main className="flex flex-col">{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

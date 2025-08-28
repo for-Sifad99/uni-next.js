@@ -19,10 +19,10 @@ const Navigation = () => {
   return (
     <nav>
       <div className="flex justify-between items-center px-4 sm:px-8 lg:px-12 xl:px-18">
-        <div className="w-full flex justify-between items-center h-22">
+        <div className="w-full flex justify-between items-center h-14 sm:h-22">
           {/* Logo */}
           <Link href="/" className="-ml-2 flex items-center">
-            <div className="w-13 h-13">
+            <div className="w-10 h-10 sm:w-13 sm:h-13">
               <Image
                 src="/uni-logo.png"
                 alt="Logo"
@@ -31,7 +31,9 @@ const Navigation = () => {
                 className="object-contain"
               />
             </div>
-            <span className="text-[44px] font-bold text-foreground">Uni</span>
+            <span className="text-[32px] sm:text-[44px] font-bold text-foreground">
+              Uni
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
@@ -65,7 +67,7 @@ const Navigation = () => {
 
           {/* Get in Touch button (desktop) */}
           <Link href="/contact">
-            <button className="lg:flex hidden bg-[#ff5c2a] hover:bg-[#ee4f1e] font-medium text-[15px] px-7.5 py-3 text-white transition-all duration-500 cursor-pointer">
+            <button className="lg:flex hidden bg-[#ff5c2a] hover:bg-[#1f242e] font-medium text-[15px] px-7.5 py-3 text-white transition-all duration-500 cursor-pointer">
               Get in Touch
             </button>
           </Link>
@@ -75,13 +77,11 @@ const Navigation = () => {
         <div className="md:hidden flex items-center">
           <button
             aria-label="Open menu"
-            className="text-3xl focus:outline-none ml-4"
+            className="w-6 sm:w-8.5 focus:outline-none ml-4"
             onClick={() => setSidebarOpen(true)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
               fill="currentColor"
               viewBox="0 0 23.4 15.4"
             >

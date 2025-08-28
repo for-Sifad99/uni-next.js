@@ -26,7 +26,7 @@ const HeroSection = () => {
             <span
               onClick={() =>
                 document
-                  .getElementById('next-section')
+                  .getElementById('courses')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
               className="text-sm sm:text-xs md:text-sm text-gray-400 tracking-wide cursor-pointer"
